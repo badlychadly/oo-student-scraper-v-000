@@ -17,7 +17,6 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-    binding.pry
     page = Nokogiri::HTML(open(profile_url))
     student_details = {}
     page.css("div.social-icon-container a").each do |d|
